@@ -1,0 +1,326 @@
+@font-face {
+    font-family: OpenSans;
+    src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: InterTightExtraBold;
+    src: url('fonts/InterTightExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: TrueLies;
+    src: url('fonts/TrueLies.ttf') format('truetype');
+}
+
+::selection {
+    background: #9cc760;
+}
+
+body {
+    font-family: OpenSans;
+    background-color: black;
+    color: #f1f1f1;
+    margin: 0;
+    background-image: url("../img/background.jpg");
+    background-size:cover;
+    -webkit-animation: slidein 80s;
+    animation: slidein 80s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    overflow: hidden;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #00000080;
+}
+
+.grain {
+    background-image: url("../img/film-grain.gif");
+    width: 100%;
+    height: 100vh;
+    opacity: 0.07;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+}
+
+.header {
+    margin-top: 30px;
+    margin-left: 7px;
+}
+
+.header .logo-container {
+    display: flex;
+}
+
+.logo-container img {
+    width: 145px;
+    transition: 0.2s all ease-in-out;
+}
+
+.logo-container h2 {
+    font-family: TrueLies;
+    letter-spacing: 4px;
+    margin: auto;
+    margin-left: 0;
+    font-size: 46px;
+    transition: 0.2s all ease-in-out;
+}
+
+.link-container {
+    font-family: InterTightExtraBold;
+    font-size: 120px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 70px;
+}
+
+.link-container a {
+    text-align: center;
+    cursor: pointer;
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.link-container a p {
+    margin: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+.link-container a:hover p {
+    filter: blur(8px);
+    color: #959595;
+}
+
+.link-container a:hover .scrolling_text {
+    opacity: 1;
+    transition: 0.2s all ease-in-out;
+}
+
+.link-container .duh-element {
+    font-size: 20px;
+    cursor: default;
+    transition: 0.2s all ease-in-out;
+}
+
+.socials-container {
+    position: absolute;
+    display: flex;
+    bottom: 20px;
+    width: 100%;
+}
+
+.socials {
+    display: flex;
+    margin: auto;
+}
+
+.socials a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #f1f1f1;
+    margin: auto;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.socials a svg {
+    width: 40px;
+    transition: 0.2s all ease-in-out;
+}
+
+.socials a svg path {
+    fill: #f1f1f1;
+    transition: 0.2s all ease-in-out;
+}
+
+.socials a:hover svg path {
+    fill: #9cc760;   
+}
+
+.scrolling_text {
+    display: flex;
+    opacity: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 144px;
+    margin-top: -144px;
+    transition: 0.2s all ease-in-out;
+    -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12%, rgb(0, 0, 0) 82%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 12%, rgb(0, 0, 0) 82%, rgba(0, 0, 0, 0) 100%);
+}
+
+.text {
+    font-family: monospace;
+    font-size: 25px;
+    text-transform: uppercase;
+    display: flex;
+    animation: animate_text 30s linear infinite;
+}
+
+.text span {
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.corner-bottom {
+    width: 100px;
+    height: 100px;
+    display: block;
+    border: 7px solid #9cc760;
+    border-right-color: #00000000;
+    border-top-color: #00000000;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    transition: 0.2s all ease-in-out;
+}
+
+.corner-top {
+    width: 100px;
+    height: 100px;
+    display: block;
+    border: 7px solid #9cc760;
+    border-bottom-color: #00000000;
+    border-left-color: #00000000;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    transition: 0.2s all ease-in-out;
+}
+
+@keyframes animate_text {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@-webkit-keyframes slidein {
+    from {
+        background-position: top; 
+    }
+    to {
+        background-position: -500px 0px; 
+    }
+}
+
+@keyframes slidein {
+    from {
+        background-position: top; 
+    }
+    to {
+        background-position: -500px 0px; 
+    }
+}
+
+/*responsive*/
+@media (max-height: 880px) or (max-width: 960px) {
+    .link-container a p {
+        font-size: 94px;
+    }
+
+    .scrolling_text {
+        height: 114px;
+        margin-top: -114px;
+    }
+}
+
+@media (max-height: 765px) or (max-width: 720px) {
+    .link-container a p {
+        font-size: 64px;
+    }
+
+    .scrolling_text {
+        height: 77px;
+        margin-top: -77px;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .link-container .duh-element {
+        font-size: 14px;
+    }
+
+    .socials a svg {
+        width: 30px;
+    }
+
+    .logo-container h2 {
+        font-size: 34px;
+    }
+
+    .logo-container img {
+        width: 105px;
+    }
+
+    .corner-top {
+        border: 5px solid #9cc760;
+        border-bottom-color: #00000000;
+        border-left-color: #00000000;
+    }
+
+    .corner-bottom {
+        border: 5px solid #9cc760;
+        border-top-color: #00000000;
+        border-right-color: #00000000;
+    }
+}
+
+@media (max-height: 545px) or (max-width: 510px) {
+    .link-container a p {
+        font-size: 44px;
+    }
+
+    .scrolling_text {
+        height: 53px;
+        margin-top: -53px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .socials a svg {
+        width: 24px;
+    }
+
+    .socials a {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+
+@media (max-width: 450px) {
+    .corner-top, .corner-bottom {
+        width: 75px;
+        height: 75px;
+    }
+
+    .logo-container img {
+        width: 75px;
+    }
+
+    .logo-container h2 {
+        font-size: 26px;
+    }
+}
