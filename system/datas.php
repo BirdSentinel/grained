@@ -2,6 +2,14 @@
 $webdev_cards = array(
     array(
         "cardClass"=>"webdev",
+        "image"=>"img/webdev/small/stephenmillerhuv3.jpg",
+        "fullimage"=>"img/webdev/full/stephenmillerhuv3.jpg",
+        "title"=>"stephenmiller.hu 2022",
+        "desc"=>"I came up with this black/green color scheme and I really liked the idea, and I also had these glitchy JavaScript animations that I wanted to use somewhere, so I thought it's time to make a new personal website for myself.",
+        "link"=>"https://github.com/BirdSentinel/stephenmillerhuv2",
+        "linkname"=>"Git repository"),
+    array(
+        "cardClass"=>"webdev",
         "image"=>"img/webdev/small/vulkancapahu.jpg",
         "fullimage"=>"img/webdev/full/vulkancapahu.jpg",
         "title"=>"Vulkáncápa",
@@ -88,14 +96,6 @@ $webdev_cards = array(
         "fullimage"=>"img/webdev/full/zackchangehu.jpg",
         "title"=>"zackchange.hu",
         "desc"=>"This was my first webpage ever. It was built on WordPress, then I realized WP s*cks, so I wrote my own CMS.",
-        "link"=>"",
-        "linkname"=>""),
-    array(
-        "cardClass"=>"webdev",
-        "image"=>"img/webdev/small/stephenmillerhuv3.jpg",
-        "fullimage"=>"img/webdev/full/stephenmillerhuv3.jpg",
-        "title"=>"stephenmiller.hu 2022",
-        "desc"=>"I came up with this black/green color scheme and I really liked the idea, and I also had these glitchy JavaScript animations that I wanted to use somewhere, so I thought it's time to make a new personal website for myself.",
         "link"=>"",
         "linkname"=>"")
 );
