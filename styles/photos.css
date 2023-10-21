@@ -1,0 +1,149 @@
+.photos-container {
+    width: 100%;
+}
+
+.photos-container .photo-link {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.photos-container .photo-link a {
+    color: #86c232;
+    text-decoration: none;
+    transition: 0.2s all ease-in-out;
+}
+
+.photos-container .photo-link a:hover {
+    color: #99db3d;
+    cursor: pointer;
+}
+
+.photos-container .flexible-photo-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.photos-container .flexible-photo-container .left-side {
+    display: flex;
+    width: 67%;
+    flex-direction: column;
+}
+
+.photos-container .flexible-photo-container .left-side .photos-box-1x2 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.photos-container .flexible-photo-container .left-side .photos-box-1x2 .big-picture {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s all ease-in-out;
+}
+
+.photos-container .flexible-photo-container .left-side .photos-box-1x2 .big-picture:hover,
+.photos-container .flexible-photo-container .left-side .photos-box-1x2 .right-pictures .photo:hover,
+.photos-container .flexible-photo-container .left-side .landscape-photos .photo:hover,
+.photos-container .flexible-photo-container .right-side .half-photo:hover,
+.photos-container .flexible-photo-container .right-side .full-photo:hover,
+.photos-container .bottom-side .full-photo:hover,
+.photos-container .bottom-side .half-photo:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+.photos-container .flexible-photo-container .left-side .photos-box-1x2 .right-pictures {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.photos-container .flexible-photo-container .left-side .photos-box-1x2 .right-pictures .photo {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s all ease-in-out;
+}
+
+.photos-container .flexible-photo-container .left-side .landscape-photos {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.photos-container .flexible-photo-container .left-side .landscape-photos .photo {
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s all ease-in-out;
+}
+
+.photos-container .flexible-photo-container .right-side {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.photos-container .flexible-photo-container .right-side .half-photo {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s all ease-in-out;
+}
+
+.photos-container .flexible-photo-container .right-side .full-photo {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s all ease-in-out;
+}
+
+.photos-container .bottom-side {
+    display: flex;
+}
+
+.photos-container .bottom-side .full-photo {
+    width: 67%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s all ease-in-out;
+}
+
+.photos-container .bottom-side .half-photo {
+    width: 33%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.2s all ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .photos-container .flexible-photo-container {
+        flex-direction: column;
+    }
+
+    .photos-container .flexible-photo-container .left-side,
+    .photos-container .flexible-photo-container .right-side {
+        width: 100%;
+        display: block;
+    }
+
+    .photos-container .flexible-photo-container .right-side .half-photo {
+        width: 50%;
+        float: left;
+    }
+
+    .photos-container .flexible-photo-container .right-side .full-photo {
+        width: 50%;
+        float: right;
+    }
+}

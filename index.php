@@ -1,8 +1,15 @@
+<?php
+include_once("system/datas.php");
+include_once("system/functions.php");
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>BirdSentinel</title>
         <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/card.css">
+        <link rel="stylesheet" href="/styles/photos.css">
         <link rel="icon" href="favicon.gif" type="image/gif">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,34 +28,47 @@
                 </div>
             </div>
             <div class="link-container">
-                <a href="fasz">
+                <a class="collapsible">
                     <p>WORK</p>
                     <div class="scrolling_text">
                         <div class="text">
                             <span>[ Development ]</span>
+                            <span>[ Games ]</span>
                             <span>[ Graphics ]</span>
-                            <span>[ Photography ]</span>
+                            <span>[ Other ]</span>
                             <span>[ Development ]</span>
+                            <span>[ Games ]</span>
                             <span>[ Graphics ]</span>
-                            <span>[ Photography ]</span>
+                            <span>[ Other ]</span>
                             <span>[ Development ]</span>
+                            <span>[ Games ]</span>
                             <span>[ Graphics ]</span>
-                            <span>[ Photography ]</span>
+                            <span>[ Other ]</span>
                         </div>
                         <div class="text">
                             <span>[ Development ]</span>
+                            <span>[ Games ]</span>
                             <span>[ Graphics ]</span>
-                            <span>[ Photography ]</span>
+                            <span>[ Other ]</span>
                             <span>[ Development ]</span>
+                            <span>[ Games ]</span>
                             <span>[ Graphics ]</span>
-                            <span>[ Photography ]</span>
+                            <span>[ Other ]</span>
                             <span>[ Development ]</span>
+                            <span>[ Games ]</span>
                             <span>[ Graphics ]</span>
-                            <span>[ Photography ]</span>
+                            <span>[ Other ]</span>
                         </div>
                     </div>
                 </a>
-                <a href="fasz">
+                <div class="collapsible-content">
+                    <?php
+                        createCardSection("Web development", "webdev", $webdev_cards);
+                        createCardSection("Games", "games", $games_cards);
+                        createCardSection("Other", "other", $other_cards);
+                    ?>
+                </div>
+                <a class="collapsible">
                     <p>ABOUT</p>
                     <div class="scrolling_text">
                         <div class="text">
@@ -81,69 +101,152 @@
                         </div>
                     </div>
                 </a>
-                <a href="fasz">
+                <div class="collapsible-content">
+                    <p class="about-me-description">Hello and welcome to my corner of the internet!<br><br> My name is BirdSentinel, and I'm thrilled to have you here. As a programmer, graphic designer, photographer, and game developer, I wear many hats in the digital realm, and I'm passionate about what I do.</p>
+                </div>
+                <a class="collapsible">
+                    <p>PHOTOS</p>
+                    <div class="scrolling_text">
+                        <div class="text">
+                            <span>[ Japan ]</span>
+                            <span>[ Cars ]</span>
+                            <span>[ Mood ]</span>
+                            <span>[ Landscape ]</span>
+                            <span>[ Models ]</span>
+                            <span>[ Japan ]</span>
+                            <span>[ Cars ]</span>
+                            <span>[ Mood ]</span>
+                            <span>[ Landscape ]</span>
+                            <span>[ Models ]</span>
+                            <span>[ Japan ]</span>
+                            <span>[ Cars ]</span>
+                            <span>[ Mood ]</span>
+                            <span>[ Landscape ]</span>
+                            <span>[ Models ]</span>
+                        </div>
+                        <div class="text">
+                            <span>[ Japan ]</span>
+                            <span>[ Cars ]</span>
+                            <span>[ Mood ]</span>
+                            <span>[ Landscape ]</span>
+                            <span>[ Models ]</span>
+                            <span>[ Japan ]</span>
+                            <span>[ Cars ]</span>
+                            <span>[ Mood ]</span>
+                            <span>[ Landscape ]</span>
+                            <span>[ Models ]</span>
+                            <span>[ Japan ]</span>
+                            <span>[ Cars ]</span>
+                            <span>[ Mood ]</span>
+                            <span>[ Landscape ]</span>
+                            <span>[ Models ]</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="collapsible-content">
+                    <?php sectionTitle("Photography", ""); ?>
+                    <div class="photos-container">
+                        <div class="flexible-photo-container">
+                            <div class="left-side">
+                                <div class="photos-box-1x2">
+                                    <div name="photo" data-photo="img/photos/photo1.jpg" class="big-picture" style="background-image: url(img/photos/photo1.jpg)"></div>
+                                    <div class="right-pictures">
+                                        <div name="photo" data-photo="img/photos/photo2.jpg" class="photo" style="background-image: url(img/photos/photo2.jpg)"></div>
+                                        <div name="photo" data-photo="img/photos/photo3.jpg" class="photo" style="background-image: url(img/photos/photo3.jpg)"></div>
+                                    </div>
+                                </div>
+                                <div class="landscape-photos">
+                                    <div name="photo" data-photo="img/photos/photo6.jpg" class="photo" style="background-image: url(img/photos/photo6.jpg)"></div>
+                                    <div name="photo" data-photo="img/photos/photo5.jpg" class="photo" style="background-image: url(img/photos/photo5.jpg)"></div>
+                                </div>
+                            </div>
+                            <div class="right-side">
+                                <div name="photo" data-photo="img/photos/photo4.jpg" class="half-photo" style="background-image: url(img/photos/photo4.jpg)"></div>
+                                <div name="photo" data-photo="img/photos/photo7.jpg" class="full-photo" style="background-image: url(img/photos/photo7.jpg)"></div>
+                                <div name="photo" data-photo="img/photos/photo8.jpg" class="half-photo" style="background-image: url(img/photos/photo8.jpg)"></div>
+                            </div>
+                        </div>
+                        <div class="bottom-side">
+                            <div name="photo" data-photo="img/photos/photo10.jpg" class="half-photo" style="background-image: url(img/photos/photo10.jpg)"></div>
+                            <div name="photo" data-photo="img/photos/photo9.jpg" class="full-photo" style="background-image: url(img/photos/photo9.jpg)"></div>
+                        </div>
+                        <h2 class="photo-link">View all my photos on <a target="_blank" href="https://500px.com/p/stephenmiller04">500px</a>!</h2>
+                    </div>
+                </div>
+                <a class="collapsible">
                     <p>PROJECTS</p>
                     <div class="scrolling_text">
                         <div class="text">
-                            <span>[ CandyVenture ]</span>
                             <span>[ ZacKonzol ]</span>
                             <span>[ Univershitty ]</span>
                             <span>[ Torque ]</span>
+                            <span>[ Csivit ]</span>
                             <span>[ Wear Me Out ]</span>
-                            <span>[ CandyVenture ]</span>
                             <span>[ ZacKonzol ]</span>
                             <span>[ Univershitty ]</span>
                             <span>[ Torque ]</span>
+                            <span>[ Csivit ]</span>
                             <span>[ Wear Me Out ]</span>
-                            <span>[ CandyVenture ]</span>
                             <span>[ ZacKonzol ]</span>
                             <span>[ Univershitty ]</span>
                             <span>[ Torque ]</span>
+                            <span>[ Csivit ]</span>
                             <span>[ Wear Me Out ]</span>
                         </div>
                         <div class="text">
-                            <span>[ CandyVenture ]</span>
                             <span>[ ZacKonzol ]</span>
                             <span>[ Univershitty ]</span>
                             <span>[ Torque ]</span>
+                            <span>[ Csivit ]</span>
                             <span>[ Wear Me Out ]</span>
-                            <span>[ CandyVenture ]</span>
                             <span>[ ZacKonzol ]</span>
                             <span>[ Univershitty ]</span>
                             <span>[ Torque ]</span>
+                            <span>[ Csivit ]</span>
                             <span>[ Wear Me Out ]</span>
-                            <span>[ CandyVenture ]</span>
                             <span>[ ZacKonzol ]</span>
                             <span>[ Univershitty ]</span>
                             <span>[ Torque ]</span>
+                            <span>[ Csivit ]</span>
                             <span>[ Wear Me Out ]</span>
                         </div>
                     </div>
                 </a>
-                <a href="fasz">
+                <div class="collapsible-content">
+                    <?php
+                        createCardSection("", "project", $project_cards);
+                    ?>
+                </div>
+                <a class="collapsible">
                     <p>UNIVERSHITTY</p>
                     <div class="scrolling_text">
                         <div class="text">
                             <span>[ Learn web development ]</span>
+                            <span>[ Coming Soon ]</span>
                             <span>[ Learn web development ]</span>
+                            <span>[ Coming Soon ]</span>
                             <span>[ Learn web development ]</span>
+                            <span>[ Coming Soon ]</span>
                             <span>[ Learn web development ]</span>
+                            <span>[ Coming Soon ]</span>
                             <span>[ Learn web development ]</span>
+                            <span>[ Coming Soon ]</span>
                             <span>[ Learn web development ]</span>
-                            <span>[ Learn web development ]</span>
-                            <span>[ Learn web development ]</span>
-                            <span>[ Learn web development ]</span>
+                            <span>[ Coming Soon ]</span>
                         </div>
                         <div class="text">
                             <span>[ Learn web development ]</span>
+                            <span>[ Coming Soon ]</span>
                             <span>[ Learn web development ]</span>
+                            <span>[ Coming Soon ]</span>
                             <span>[ Learn web development ]</span>
+                            <span>[ Coming Soon ]</span>
                             <span>[ Learn web development ]</span>
+                            <span>[ Coming Soon ]</span>
                             <span>[ Learn web development ]</span>
+                            <span>[ Coming Soon ]</span>
                             <span>[ Learn web development ]</span>
-                            <span>[ Learn web development ]</span>
-                            <span>[ Learn web development ]</span>
-                            <span>[ Learn web development ]</span>
+                            <span>[ Coming Soon ]</span>
                         </div>
                     </div>
                 </a>
@@ -165,6 +268,27 @@
                 </div>
             </div>
             <div class="grain"></div>
+            <div id="picture_modal" class="full-screen-item-picture-modal" style="display: none;">
+                <span class="loading-circle"></span>
+                <img class="modal-img" id="modalimg" src="https://www.vulkancapa.hu/img/marketplace/17/item1.jpg">
+            </div>
         </div>
     </body>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+    <script src="scripts/base.js"></script>
 </html>

@@ -13,6 +13,11 @@
     src: url('fonts/TrueLies.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: fm-bold;
+    src: url('fonts/FiraMono-Bold.ttf') format('truetype');
+}
+
 ::selection {
     background: #9cc760;
 }
@@ -23,7 +28,8 @@ body {
     color: #f1f1f1;
     margin: 0;
     background-image: url("../img/background.jpg");
-    background-size:cover;
+    background-size: cover;
+    background-attachment: fixed;
     -webkit-animation: slidein 80s;
     animation: slidein 80s;
     -webkit-animation-fill-mode: forwards;
@@ -32,14 +38,12 @@ body {
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
-    overflow: hidden;
 }
 
 .page-content {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    background-color: #00000080;
+    min-height: -webkit-fill-available;
 }
 
 .grain {
@@ -47,7 +51,7 @@ body {
     width: 100%;
     height: 100vh;
     opacity: 0.07;
-    position: absolute;
+    position: fixed;
     top: 0;
     pointer-events: none;
 }
@@ -82,10 +86,14 @@ body {
     flex-direction: column;
     width: 100%;
     max-width: 1600px;
+    min-height: calc(100vh - 287px);
     margin: auto;
     margin-top: auto;
     margin-bottom: auto;
-    padding-bottom: 70px;
+}
+
+.link-container .collapsible:first-child {
+    margin-top: auto;
 }
 
 .link-container a {
@@ -100,12 +108,14 @@ body {
     transition: 0.2s all ease-in-out;
 }
 
-.link-container a:hover p {
+.link-container a:hover p,
+.link-container .active p {
     filter: blur(8px);
     color: #959595;
 }
 
-.link-container a:hover .scrolling_text {
+.link-container a:hover .scrolling_text,
+.link-container .active .scrolling_text {
     opacity: 1;
     transition: 0.2s all ease-in-out;
 }
@@ -113,14 +123,22 @@ body {
 .link-container .duh-element {
     font-size: 20px;
     cursor: default;
+    margin-bottom: auto;
     transition: 0.2s all ease-in-out;
 }
 
+.about-me-description {
+    text-align: center;
+    font-size: 32px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 .socials-container {
-    position: absolute;
     display: flex;
-    bottom: 20px;
     width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .socials {
@@ -185,7 +203,7 @@ body {
     border: 7px solid #9cc760;
     border-right-color: #00000000;
     border-top-color: #00000000;
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     left: 30px;
     transition: 0.2s all ease-in-out;
@@ -198,7 +216,7 @@ body {
     border: 7px solid #9cc760;
     border-bottom-color: #00000000;
     border-left-color: #00000000;
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 30px;
     transition: 0.2s all ease-in-out;
@@ -231,8 +249,60 @@ body {
     }
 }
 
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*Full screen modal*/
+.full-screen-item-picture-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.full-screen-item-picture-modal .loading-circle {
+    border: 5px solid #ffffff4a;
+    border-left: 5px solid transparent;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: block;
+    flex: none;
+    margin: auto;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+.full-screen-item-picture-modal:hover {
+    cursor: pointer;
+}
+
+.full-screen-item-picture-modal .modal-img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+}
+
 /*responsive*/
-@media (max-height: 880px) or (max-width: 960px) {
+@media (max-height: 1050px) or (max-width: 960px) {
     .link-container a p {
         font-size: 94px;
     }
@@ -241,9 +311,13 @@ body {
         height: 114px;
         margin-top: -114px;
     }
+
+    .about-me-description {
+        font-size: 24px;
+    }
 }
 
-@media (max-height: 765px) or (max-width: 720px) {
+@media (max-height: 890px) or (max-width: 720px) {
     .link-container a p {
         font-size: 64px;
     }
@@ -284,9 +358,13 @@ body {
         border-top-color: #00000000;
         border-right-color: #00000000;
     }
+
+    .about-me-description {
+        font-size: 22px;
+    }
 }
 
-@media (max-height: 545px) or (max-width: 510px) {
+@media (max-height: 650px) or (max-width: 510px) {
     .link-container a p {
         font-size: 44px;
     }
@@ -308,9 +386,13 @@ body {
         margin-left: 12px;
         margin-right: 12px;
     }
+
+    .about-me-description {
+        font-size: 18px;
+    }
 }
 
-@media (max-width: 450px) {
+@media (max-height: 520px) or (max-width: 450px) {
     .corner-top, .corner-bottom {
         width: 75px;
         height: 75px;
@@ -322,5 +404,9 @@ body {
 
     .logo-container h2 {
         font-size: 26px;
+    }
+
+    .about-me-description {
+        font-size: 14px;
     }
 }
