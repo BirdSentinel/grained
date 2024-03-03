@@ -156,6 +156,14 @@ $other_cards = array(
 $project_cards = array(
     array(
         "cardClass"=>"project",
+        "image"=>"img/projects/small/rvglswitch.jpg",
+        "fullimage"=>"img/projects/full/rvglswitch.jpg",
+        "title"=>"RVGL port for Switch",
+        "desc"=>"Native port of RVGL which is a cross-platform rewrite of the best RC car racing game of the 90's, Re-Volt!",
+        "link"=>"https://github.com/BirdSentinel/rvgl-for-switch",
+        "linkname"=>"Download from Github"),
+    array(
+        "cardClass"=>"project",
         "image"=>"img/projects/small/wearmeout.jpg",
         "fullimage"=>"img/projects/full/wearmeout.jpg",
         "title"=>"Wear Me Out",
