@@ -2,6 +2,14 @@
 $webdev_cards = array(
     array(
         "cardClass"=>"webdev",
+        "image"=>"img/webdev/small/csivit.jpg",
+        "fullimage"=>"img/webdev/full/csivit.jpg",
+        "title"=>"Csivit",
+        "desc"=>"Your digital destination for a diverse blend of articles covering Gastro, Games, Underground culture, Reviews, and exciting Events.",
+        "link"=>"https://csiv.it/",
+        "linkname"=>"Official site"),
+    array(
+        "cardClass"=>"webdev",
         "image"=>"img/webdev/small/stephenmillerhuv3.jpg",
         "fullimage"=>"img/webdev/full/stephenmillerhuv3.jpg",
         "title"=>"stephenmiller.hu 2022",
@@ -103,12 +111,28 @@ $webdev_cards = array(
 $games_cards = array(
     array(
         "cardClass"=>"game",
+        "image"=>"img/games/small/csiripkek.jpg",
+        "fullimage"=>"img/games/full/csiripkek.jpg",
+        "title"=>"Csiripkek - Arena",
+        "desc"=>"Our own Quake 3 fork from the Quake III Arena GPL source code. It runs perfectly on modern machines and includes high quality models, textures, etc., while of course preserving the original game aesthetics.",
+        "link"=>"https://www.birdsentinel.com/downloads/csiripkekarena_apr_20.zip",
+        "linkname"=>"Download from here"),
+    array(
+        "cardClass"=>"game",
         "image"=>"img/games/small/torque.jpg",
         "fullimage"=>"img/games/full/torque.jpg",
         "title"=>"Torque - RC Madness",
-        "desc"=>"RC Racing game, more details coming soon... <b>[In progress]</b>",
+        "desc"=>"RC Racing game, more details coming soon... <br><b>[In progress]</b>",
         "link"=>"",
         "linkname"=>""),
+    array(
+        "cardClass"=>"game",
+        "image"=>"img/games/small/rvglswitch.jpg",
+        "fullimage"=>"img/games/full/rvglswitch.jpg",
+        "title"=>"RVGL port for Switch",
+        "desc"=>"Native port of RVGL which is a cross-platform rewrite of the best RC car racing game of the 90's, Re-Volt!",
+        "link"=>"https://github.com/BirdSentinel/rvgl-for-switch",
+        "linkname"=>"Download from Github"),
     array(
         "cardClass"=>"game",
         "image"=>"img/games/small/candyventure.jpg",
@@ -137,6 +161,14 @@ $games_cards = array(
 $other_cards = array(
     array(
         "cardClass"=>"other",
+        "image"=>"img/other/small/wearmeout.jpg",
+        "fullimage"=>"img/other/full/wearmeout.jpg",
+        "title"=>"Wear Me Out",
+        "desc"=>"My own clothing brand. Coming Soon. <br><b>[In progress]</b>",
+        "link"=>"",
+        "linkname"=>""),
+    array(
+        "cardClass"=>"other",
         "image"=>"img/other/small/keygenvibe.jpg",
         "fullimage"=>"img/other/full/keygenvibe.jpg",
         "title"=>"KeygenVibe",
@@ -149,57 +181,6 @@ $other_cards = array(
         "fullimage"=>"img/other/full/univershitty.jpg",
         "title"=>"Univershitty",
         "desc"=>"Since the educational system is immeasurably bad, I've decided to make documents about my knowledge, mostly of web development, and distribute it on the internet for free. <br><b>[In progress]</b>",
-        "link"=>"",
-        "linkname"=>"")
-);
-
-$project_cards = array(
-    array(
-        "cardClass"=>"project",
-        "image"=>"img/projects/small/rvglswitch.jpg",
-        "fullimage"=>"img/projects/full/rvglswitch.jpg",
-        "title"=>"RVGL port for Switch",
-        "desc"=>"Native port of RVGL which is a cross-platform rewrite of the best RC car racing game of the 90's, Re-Volt!",
-        "link"=>"https://github.com/BirdSentinel/rvgl-for-switch",
-        "linkname"=>"Download from Github"),
-    array(
-        "cardClass"=>"project",
-        "image"=>"img/projects/small/wearmeout.jpg",
-        "fullimage"=>"img/projects/full/wearmeout.jpg",
-        "title"=>"Wear Me Out",
-        "desc"=>"My own clothing brand. Coming Soon.",
-        "link"=>"https://www.wearmeout.store/",
-        "linkname"=>"Official site"),
-    array(
-        "cardClass"=>"project",
-        "image"=>"img/projects/small/csivit.jpg",
-        "fullimage"=>"img/projects/full/csivit.jpg",
-        "title"=>"Csivit",
-        "desc"=>"Your digital destination for a diverse blend of articles covering Gastro, Games, Underground culture, Reviews, and exciting Events.",
-        "link"=>"https://csiv.it/",
-        "linkname"=>"Official site"),
-    array(
-        "cardClass"=>"project",
-        "image"=>"img/games/small/torque.jpg",
-        "fullimage"=>"img/games/full/torque.jpg",
-        "title"=>"Torque - RC Madness",
-        "desc"=>"My own RC Racing game, more details coming soon... <b>[In progress]</b>",
-        "link"=>"",
-        "linkname"=>""),
-    array(
-        "cardClass"=>"project",
-        "image"=>"img/other/small/univershitty.jpg",
-        "fullimage"=>"img/other/full/univershitty.jpg",
-        "title"=>"Univershitty",
-        "desc"=>"Since the educational system is immeasurably bad, I've decided to make documents about my knowledge, mostly of web development, and distribute it on the internet for free. <br><b>[In progress]</b>",
-        "link"=>"",
-        "linkname"=>""),
-    array(
-        "cardClass"=>"project",
-        "image"=>"img/webdev/small/zackonzolhu.jpg",
-        "fullimage"=>"img/webdev/full/zackonzolhu.jpg",
-        "title"=>"ZacKonzol",
-        "desc"=>"This was my webshop where I sold my refurbished videogame consoles. The webshop is a fully self-made site written in native PHP without any libraries. Responsive CSS design is also written by myself, also without using any libraries.",
         "link"=>"",
         "linkname"=>"")
 );
